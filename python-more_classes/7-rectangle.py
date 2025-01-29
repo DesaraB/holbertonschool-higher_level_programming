@@ -7,7 +7,7 @@ class Rectangle:
     """Class for a rectangle"""
     number_of_instances = 0
     print_symbol = "#"
-    
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -51,7 +51,7 @@ class Rectangle:
             return milo
         for i in range(self.__height):
             for j in range(self.__width):
-                milo += "#"
+                milo += str(self.print_symbol)
             if i < self.__height - 1:
                 milo += "\n"
         return milo
