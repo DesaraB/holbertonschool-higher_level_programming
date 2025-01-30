@@ -6,9 +6,10 @@
 class Rectangle:
     """Class for a rectangle"""
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
-        self.width = width
         self.height = height
+        self.width = width
         Rectangle.number_of_instances += 1
 
     @property
@@ -36,23 +37,23 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.__width * self.__height
+        return self.__height * self.__width
 
     def perimeter(self):
         if self.__width == 0 or self.__height == 0:
             return 0
-        return 2 * (self.__width + self.__height)
+        return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        milo = ""
         if self.__width == 0 or self.__height == 0:
-            return milo
+            return ""
+        new_str = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                milo += "#"
+                new_str += "#"
             if i < self.__height - 1:
-                milo += "\n"
-        return milo
+                new_str += "\n"
+        return new_str
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
