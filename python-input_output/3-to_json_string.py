@@ -1,10 +1,10 @@
 #!/usr/bin/python3
+
+"""module to convert to json"""
+
 import json
 
 
-"""Module that returns the JSON representation of an obj str"""
-
-
 def to_json_string(my_obj):
-    """func that converts obj to str"""
+    """func to convert to json"""
     return json.dumps(my_obj)
