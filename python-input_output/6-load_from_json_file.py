@@ -8,4 +8,5 @@ import json
 def load_from_json_file(filename):
     """funct that performs the task"""
     with open(filename, "r") as f:
-        json.load(f)
+        content = json.load(f)
+        return content
